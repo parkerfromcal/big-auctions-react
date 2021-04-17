@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Heebo", sans-serif;
+  font-weight: 200;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 175px;
+  width: 175px;
+  margin: 10px 0 0 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-family: "Heebo", sans-serif;
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h2,
+h3,
+.card-body > .card-title {
+  font-family: "Heebo", sans-serif;
+}
+
+h2 {
+  color: #000;
+}
+
+p {
+  font-size: 18px;
+}
+
+.pt-6 {
+  padding-top: 4rem;
+}
+
+.pt-7 {
+  padding-top: 5rem;
+}
+
+.pt-8 {
+  padding-top: 6rem;
+}
+
+.pt-9 {
+  padding-top: 7rem;
+}
+
+.pt-10 {
+  padding-top: 10rem;
+}
+
+.pb-6 {
+  padding-bottom: 4rem;
+}
+
+.pb-7 {
+  padding-bottom: 5rem;
+}
+
+.pb-8 {
+  padding-bottom: 6rem;
+}
+
+.pb-9 {
+  padding-bottom: 7rem;
+}
+
+.pb-10 {
+  padding-bottom: 10rem;
+}
+
+.card-title {
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
+}
+
+.site-footer {
+  background-color: darkgray;
+  color: white;
+  padding: 20px 0;
+  text-decoration: none !important;
+}
+
+.site-footer a {
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.nav-item {
+  font-weight: bold;
+}
+
+.nav-item-main:hover {
+  border-bottom: 3px solid #000;
+}
+
+.bg-gray {
+  background-color: lightgray;
+}
+
+.bg-orange {
+  background-color: #f8913d;
+}
+
+.btn-blue {
+  background-color: #2769e3;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-link-blue {
+  color: #2769e3 !important;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn-orange {
+  background-color: #f8913d;
+  color: white;
+}
+
+.btn-pill {
+  border-radius: 25px !important;
+}
+
+a {
+  color: #2769e3;
+}
+
+@media (max-width: 767px) {
+  h2,
+  h3 {
+    padding: 10px 10px 0 10px;
   }
-  to {
-    transform: rotate(360deg);
+  p {
+    padding: 0 10px;
+  }
+  button {
+    margin: 0 5px;
   }
 }
