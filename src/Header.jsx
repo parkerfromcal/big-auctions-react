@@ -40,14 +40,14 @@ class Header extends Component {
             </NavbarBrand>
             <NavbarToggler onClick={this.toggleNav} />
             <Collapse isOpen={this.state.isNavOpen} navbar>
-              <Nav navbar>
+              <Nav navbar className="justify-content-end">
                 <NavItem>
-                  <NavLink className="nav-link" to="/buy">
+                  <NavLink className="nav-link nav-item-main" to="/buy">
                     buy
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to="/sell">
+                  <NavLink className="nav-link nav-item-main" to="/sell">
                     sell
                   </NavLink>
                 </NavItem>
@@ -58,7 +58,7 @@ class Header extends Component {
                 </NavItem>
                 <NavItem>
                   <NavLink className="nav-link" to="/contact">
-                    contact
+                    <i class="fa fa-envelope"></i>
                   </NavLink>
                 </NavItem>
               </Nav>

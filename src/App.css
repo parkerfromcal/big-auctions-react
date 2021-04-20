@@ -89,14 +89,16 @@ p {
 .site-footer a {
   font-size: 20px;
   font-weight: 550;
+  text-decoration: none !important;
 }
 
 .nav-link {
   color: #000;
 }
 
-.nav-item {
+NavItem {
   font-weight: bold;
+  color: #000;
 }
 
 .nav-item-main:hover {
@@ -114,6 +116,8 @@ p {
 .btn-blue {
   background-color: #2769e3;
   color: white;
+  border-radius: 25px !important;
+  padding: 10px;
 }
 
 .btn-link-blue {
@@ -124,6 +128,8 @@ p {
 .btn-orange {
   background-color: #f8913d;
   color: white;
+  border-radius: 25px !important;
+  padding: 10px;
 }
 
 .btn-pill {
