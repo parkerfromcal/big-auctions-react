@@ -25,15 +25,15 @@ function Footer(props) {
             </div>
           </div>
         </div>
-        <div className="row justify-content-end">
-          <div className="col-md-15 mt-3">
-            <a href="http://instagram.com/">
+        <div className="row">
+          <div className="col-12 d-flex justify-content-end">
+            <a href="http://instagram.com/" className="ml-3">
               <i className="fa fa-instagram" />
             </a>{" "}
-            <a href="http://www.facebook.com/">
+            <a href="http://www.facebook.com/" className="ml-3">
               <i className="fa fa-facebook" />
             </a>{" "}
-            <a href="http://twitter.com/">
+            <a href="http://twitter.com/" className="ml-3">
               <i className="fa fa-twitter" />
             </a>{" "}
           </div>
