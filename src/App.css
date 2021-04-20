@@ -6,7 +6,7 @@ body {
 .App-logo {
   height: 175px;
   width: 175px;
-  margin: 10px 0 0 20px;
+  margin-top: 10px;
 }
 
 h1 {
@@ -89,6 +89,10 @@ p {
 .site-footer a {
   font-size: 20px;
   font-weight: 550;
+}
+
+.nav-link {
+  color: #000;
 }
 
 .nav-item {

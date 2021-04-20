@@ -1,14 +1,18 @@
-import logo from "./BIC2.svg";
+import React, { Component } from "react";
+import Main from "./Main";
 import "./App.css";
+import { BrowserRouter } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Main />
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
