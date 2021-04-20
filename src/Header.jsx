@@ -40,26 +40,36 @@ class Header extends Component {
             </NavbarBrand>
             <NavbarToggler onClick={this.toggleNav} />
             <Collapse isOpen={this.state.isNavOpen} navbar>
-              <Nav navbar className="justify-content-end">
+              <Nav navbar className="ml-auto">
                 <NavItem>
-                  <NavLink className="nav-link nav-item-main" to="/buy">
+                  <NavLink className="nav-link nav-link-main mr-3" to="/about">
+                    about
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="nav-link nav-link-main mr-3" to="/buy">
                     buy
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link nav-item-main" to="/sell">
+                  <NavLink className="nav-link nav-link-main mr-3" to="/sell">
                     sell
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link btn-blue" to="/login">
-                    login
-                  </NavLink>
+                  <a
+                    type="button"
+                    href="/login"
+                    className="btn-blue ml-3 pr-3 pl-3"
+                  >
+                    Login
+                  </a>
                 </NavItem>
-                <NavItem>
-                  <NavLink className="nav-link" to="/contact">
-                    <i class="fa fa-envelope"></i>
-                  </NavLink>
+                <NavItem className="align-self-center">
+                  <i class="fa fa-envelope fa-2x ml-4" />
+                </NavItem>
+                <NavItem className="align-self-center">
+                  <i class="fa fa-search fa-2x ml-4" />
                 </NavItem>
               </Nav>
             </Collapse>

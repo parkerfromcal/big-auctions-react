@@ -93,15 +93,12 @@ p {
 }
 
 .nav-link {
-  color: #000;
+  color: #000 !important;
+  font-weight: 550;
+  font-size: 20px;
 }
 
-NavItem {
-  font-weight: bold;
-  color: #000;
-}
-
-.nav-item-main:hover {
+.nav-link-main:hover {
   border-bottom: 3px solid #000;
 }
 
