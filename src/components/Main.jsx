@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Home from "./Home";
+import About from "./About";
 import { Switch, Route } from "react-router-dom";
 
 class Main extends Component {
@@ -19,6 +20,7 @@ class Main extends Component {
         <Header />
         <Switch>
           <Route path="/" component={Homepage} />
+          <Route exact path="/about" component={About} />
         </Switch>
         <Footer />
       </div>
