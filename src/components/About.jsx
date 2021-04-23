@@ -1,10 +1,59 @@
 import React, { Component } from "react";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  Col,
+  Button,
+} from "reactstrap";
+import { Link } from "react-router-dom";
 
 class About extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: "",
+      email: "",
+      message: "",
+    };
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleInputChange(event) {
+    const target = event.target;
+    const name = target.name;
+    const value = target.type === "checkbox" ? target.checked : target.value;
+
+    this.setState({
+      [name]: value,
+    });
+  }
+
+  handleSubmit(event) {
+    console.log("Current state is: " + JSON.stringify(this.state));
+    alert("Current state is: " + JSON.stringify(this.state));
+    event.preventDefault();
+  }
+
   render() {
     return (
       <div>
         <div className="container">
+          <div className="row">
+            <div className="col">
+              <Breadcrumb>
+                <BreadcrumbItem>
+                  <Link to="/">home</Link>
+                </BreadcrumbItem>
+                <BreadcrumbItem active>about</BreadcrumbItem>
+              </Breadcrumb>
+            </div>
+          </div>
           <div className="row d-flex justify-content-center text-center pt-5">
             <div className="col-12 col-sm-6">
               <h1 className="display-4">About</h1>
@@ -55,13 +104,63 @@ class About extends Component {
           </div>
         </div>
         <div className="container pt-7 pb-7">
-          <div className="row justify-content-center" id="getInTouch">
-            <div className="col-12 text-center">
+          <div className="row d-flex justify-content-center" id="getInTouch">
+            <div className="col-md-10 text-center">
               <h1>Get in touch</h1>
               <p>
                 301 East Henry Street | PO Box 866 | Mt. Pleasant, IA 52641
                 <br /> (319) 385-3399
               </p>
+            </div>
+          </div>
+          <div className="row d-flex justify-content-center">
+            <div className="col-md-10">
+              <Form onSubmit={this.handleSubmit}>
+                <FormGroup row>
+                  <Col md={10}>
+                    <Label htmlFor="name">name</Label>
+                    <Input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={this.state.name}
+                      onChange={this.handleInputChange}
+                    />
+                  </Col>
+                </FormGroup>
+                <FormGroup row>
+                  <Col md={10}>
+                    <Label htmlFor="email">email</Label>
+                    <Input
+                      type="text"
+                      id="email"
+                      name="email"
+                      value={this.state.email}
+                      onChange={this.handleInputChange}
+                    />
+                  </Col>
+                </FormGroup>
+                <FormGroup row>
+                  <Col md={10}>
+                    <Label htmlFor="message">message</Label>
+                    <Input
+                      type="textarea"
+                      id="message"
+                      name="message"
+                      rows="12"
+                      value={this.state.message}
+                      onChange={this.handleInputChange}
+                    ></Input>
+                  </Col>
+                </FormGroup>
+                <FormGroup row>
+                  <Col md={10}>
+                    <Button type="submit" className="btn-blue">
+                      submit
+                    </Button>
+                  </Col>
+                </FormGroup>
+              </Form>
             </div>
           </div>
         </div>

@@ -133,8 +133,9 @@ p {
 }
 
 .btn-blue {
-  background-color: #2769e3;
+  background-color: #2769e3 !important;
   color: white;
+  border: none !important;
   border-radius: 25px !important;
   padding: 15px;
 }
@@ -170,4 +171,8 @@ a {
   button {
     margin: 0 5px;
   }
+}
+
+.formGroup {
+  align-items: center !important;
 }
