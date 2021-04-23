@@ -122,9 +122,7 @@ p {
 
 .site-footer {
   background-color: darkgray;
-  color: white;
   padding: 20px 0;
-  text-decoration: none !important;
 }
 
 .site-footer a {
@@ -144,25 +142,26 @@ p {
 .btn-blue {
   background-color: #2769e3 !important;
   color: white;
-  border: none !important;
   border-radius: 25px !important;
   padding: 15px;
 }
 
 .btn-link-blue {
-  color: #2769e3 !important;
+  color: #2769e3;
   font-weight: bold;
 }
 
 .btn-orange {
-  background-color: #f8913d;
+  background-color: #f8913d !important;
   color: white;
+  border: none !important;
   border-radius: 25px !important;
   padding: 15px;
 }
 
 .btn-pill {
   border-radius: 25px !important;
+  text-decoration: none !important;
 }
 
 a {

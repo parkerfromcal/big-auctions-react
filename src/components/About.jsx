@@ -36,7 +36,9 @@ class About extends Component {
 
   handleSubmit(event) {
     console.log("Current state is: " + JSON.stringify(this.state));
-    alert("Current state is: " + JSON.stringify(this.state));
+    alert(
+      "Thank you for submitting your information: " + JSON.stringify(this.state)
+    );
     event.preventDefault();
   }
 

@@ -73,11 +73,7 @@ class Home extends Component {
                 Interested in selling with us? Get in touch and we'll post your
                 equipment.
               </p>
-              <a
-                className="btn-blue btn-pill btn-lg"
-                href="buy.html"
-                role="button"
-              >
+              <a className="btn-blue btn-pill btn-lg" href="/buy" role="button">
                 BUY
               </a>
             </div>
@@ -89,7 +85,7 @@ class Home extends Component {
               </p>
               <a
                 className="btn-orange btn-pill btn-lg"
-                href="sell.html"
+                href="/sell"
                 role="button"
               >
                 SELL
