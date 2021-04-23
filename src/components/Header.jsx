@@ -28,7 +28,7 @@ class Header extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar dark sticky="top" expand="md">
+        <Navbar dark expand="md">
           <div className="container">
             <NavbarBrand className="mr-auto" href="/">
               <img
@@ -66,7 +66,9 @@ class Header extends Component {
                   </a>
                 </NavItem>
                 <NavItem className="align-self-center">
-                  <i class="fa fa-envelope fa-2x ml-4" />
+                  <a href="/contact">
+                    <i class="fa fa-envelope fa-2x ml-4 noLink" />
+                  </a>
                 </NavItem>
                 <NavItem className="align-self-center">
                   <i class="fa fa-search fa-2x ml-4" />

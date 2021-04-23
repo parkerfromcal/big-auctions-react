@@ -11,7 +11,7 @@ body {
 
 h1 {
   font-family: "Heebo", sans-serif;
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 
 h2,
@@ -102,6 +102,10 @@ p {
   border-bottom: 3px solid #000;
 }
 
+.noLink {
+  color: #000;
+}
+
 .bg-gray {
   background-color: lightgray;
 }
@@ -114,7 +118,7 @@ p {
   background-color: #2769e3;
   color: white;
   border-radius: 25px !important;
-  padding: 10px;
+  padding: 15px;
 }
 
 .btn-link-blue {
@@ -126,7 +130,7 @@ p {
   background-color: #f8913d;
   color: white;
   border-radius: 25px !important;
-  padding: 10px;
+  padding: 15px;
 }
 
 .btn-pill {
