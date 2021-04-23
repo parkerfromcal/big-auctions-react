@@ -3,12 +3,6 @@ body {
   font-weight: 200;
 }
 
-.App-logo {
-  height: 175px;
-  width: 175px;
-  margin-top: 10px;
-}
-
 h1 {
   font-family: "Heebo", sans-serif;
   font-weight: 700 !important;
@@ -68,6 +62,38 @@ p {
   padding-bottom: 10rem;
 }
 
+.App-logo {
+  height: 175px;
+  width: 175px;
+  margin-top: 10px;
+}
+
+.nav-link {
+  color: #000 !important;
+  font-weight: 550;
+  font-size: 20px;
+}
+
+.nav-link-main:hover {
+  border-bottom: 3px solid #000;
+}
+
+.noLink {
+  color: #000;
+}
+
+.full-width-div {
+  position: relative;
+  width: 100%;
+  left: 0;
+}
+
+.img-main {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+}
+
 .card-title {
   font-weight: 200;
   font-size: 20px;
@@ -90,20 +116,6 @@ p {
   font-size: 20px;
   font-weight: 550;
   text-decoration: none !important;
-}
-
-.nav-link {
-  color: #000 !important;
-  font-weight: 550;
-  font-size: 20px;
-}
-
-.nav-link-main:hover {
-  border-bottom: 3px solid #000;
-}
-
-.noLink {
-  color: #000;
 }
 
 .bg-gray {

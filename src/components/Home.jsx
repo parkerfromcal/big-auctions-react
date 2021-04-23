@@ -18,7 +18,7 @@ class Home extends Component {
         <div className="full-width-div">
           <div className="row">
             <img
-              src="../../public/assets/images/homepage_main.jpg"
+              src="/assets/images/homepage_main.jpg"
               className="img-fluid img-main"
               alt="concrete forms added to create building"
             />
