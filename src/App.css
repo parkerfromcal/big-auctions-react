@@ -68,6 +68,10 @@ p {
   margin-top: 15px;
 }
 
+.nav-item {
+  align-self: center;
+}
+
 .nav-link {
   color: #000 !important;
   font-weight: 550;
@@ -80,6 +84,11 @@ p {
 
 .noLink {
   color: #000;
+}
+
+.breadcrumb {
+  background-color: #fff !important;
+  margin-left: 20px;
 }
 
 .full-width-div {
@@ -171,8 +180,4 @@ a {
   button {
     margin: 0 5px;
   }
-}
-
-.formGroup {
-  align-items: center !important;
 }
