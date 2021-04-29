@@ -1,28 +1,37 @@
 import React, { Component } from "react";
-/*import { Link } from "react-router-dom";
-
-function RenderForSale({ forSale }) {
-  return (
-    <Card>
-      <Link to={`/buy/${forSale.name}`}>
-        <CardImg width="100%" src={forSale.image} />
-      </Link>
-      <CardBody>
-        <CardTitle>{forSale.name}</CardTitle>
-        <CardBody>{forSale.description}</CardBody>
-      </CardBody>
-    </Card>
-  );
-}*/
+import { Link } from "react-router-dom";
+import { Card, CardImg, CardBody, CardTitle, Button } from "reactstrap";
 
 class ForSale extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      forSale: [],
+      selectedForSale: null,
     };
   }
+
+  onSelectedForSale(forSale) {
+    this.setState({ selectedForSale: forSale });
+  }
+
+  renderForSale(forSale) {
+    if (forSale) {
+      return (
+        <Card>
+          <Link to={`/buy/${forSale.name}`}>
+            <CardImg width="100%" src={forSale.image} />
+          </Link>
+          <CardBody>
+            <CardTitle>{forSale.name}</CardTitle>
+            <CardBody>{forSale.description}</CardBody>
+          </CardBody>
+        </Card>
+      );
+    }
+    return <div />;
+  }
+
   render() {
     const forSale = this.props.forsale.map((forSale) => {
       return (
@@ -36,13 +45,19 @@ class ForSale extends Component {
               {forSale.date} <br />
               {forSale.description}
             </p>
+            <Button onClick={() => this.onSelectedForSale(forSale)}>
+              Bid now
+            </Button>
           </div>
         </div>
       );
     });
     return (
-      <div className="contsainer">
+      <div>
         <div className="row">{forSale}</div>
+        <div className="row">
+          {this.renderForSale(this.state.selectedForSale)}
+        </div>
       </div>
     );
   }
