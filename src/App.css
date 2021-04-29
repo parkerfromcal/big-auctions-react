@@ -121,7 +121,7 @@ p {
 }
 
 .site-footer {
-  background-color: darkgray;
+  background-color: lightgray;
   padding: 20px 0;
 }
 
@@ -129,6 +129,10 @@ p {
   font-size: 20px;
   font-weight: 550;
   text-decoration: none !important;
+}
+
+.site-footer a:hover {
+  color: white;
 }
 
 .bg-gray {

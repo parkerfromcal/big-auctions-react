@@ -83,7 +83,7 @@ class Footer extends Component {
 
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
           <ModalHeader toggle={this.toggleModal}>
-            sign up for Big Auctions newsletter
+            sign up for big auctions newsletter
           </ModalHeader>
           <ModalBody>
             <Form onSubmit={this.handleSubmit}>

@@ -11,23 +11,23 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
-class About extends Component {
+class Sell extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       name: "",
       email: "",
-      message: "",
+      sell: "",
     };
-    this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
   handleInputChange(event) {
     const target = event.target;
     const name = target.name;
-    const value = target.type === "checkbox" ? target.checked : target.value;
+    const value = target.value;
 
     this.setState({
       [name]: value,
@@ -37,7 +37,8 @@ class About extends Component {
   handleSubmit(event) {
     console.log("Current state is: " + JSON.stringify(this.state));
     alert(
-      "Thank you for submitting your information: " + JSON.stringify(this.state)
+      "We will contact you soon about selling with Big Auctions " +
+        JSON.stringify(this.state)
     );
     event.preventDefault();
   }
@@ -52,30 +53,22 @@ class About extends Component {
                 <BreadcrumbItem>
                   <Link to="/">home</Link>
                 </BreadcrumbItem>
-                <BreadcrumbItem active>about</BreadcrumbItem>
+                <BreadcrumbItem active>sell</BreadcrumbItem>
               </Breadcrumb>
             </div>
           </div>
           <div className="row d-flex justify-content-center text-center pt-5">
             <div className="col-12 col-sm-6">
-              <h1 className="display-4">About</h1>
+              <h1 className="display-4">Sell</h1>
             </div>
           </div>
           <div className="row d-flex justify-content-center">
             <div className="col-12 col-md-6 pb-7">
               <p>
-                Big Auctions is a family owned business with over 35 years of
-                experience in the auction industry. We are a full service
-                auction company specializing in concrete construction. We help
-                owners at all stages of their business, including those looking
-                to retire, sell their business or market excess equipment.
-              </p>
-              <p>
-                Our extensive experience in the field and vast knowledge of the
-                industry, allow us to get the highest recovery value for our
-                customers’ assets. From thorough preparation of assets to
-                detailed cataloging, you’ll see how our expertise makes a
-                difference long before the day of the sale.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
               </p>
             </div>
           </div>
@@ -84,21 +77,21 @@ class About extends Component {
           <div className="row">
             <div className="col-12 col-sm-4 p-1">
               <img
-                src="/assets/images/fons-heijnsbroek-vBfEZdpEr-E-unsplash.jpg"
+                src="assets/images/construction_truck_sell.jpg"
                 className="img-three"
                 alt="concrete truck"
               />
             </div>
             <div className="col-12 col-sm-4 p-1">
               <img
-                src="assets/images/anne-nygard-fWqzoThfnpA-unsplash.jpg"
+                src="assets/images/concrete_sell.jpg"
                 className="img-three"
                 alt="conrete form"
               />
             </div>
             <div className="col-12 col-sm-4 p-1">
               <img
-                src="assets/images/ade-adebowale-DKr6BEdI2sE-unsplash.jpg"
+                src="assets/images/trucks_sell.jpg"
                 className="img-three"
                 alt="two concrete trucks working on new road"
               />
@@ -108,10 +101,10 @@ class About extends Component {
         <div className="container pt-7 pb-7">
           <div className="row d-flex justify-content-center" id="getInTouch">
             <div className="col-md-8 text-center mb-3">
-              <h1>Get in touch</h1>
+              <h1>Interested in selling with Big Auctions?</h1>
               <p>
-                301 East Henry Street | PO Box 866 | Mt. Pleasant, IA 52641
-                <br /> (319) 385-3399
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
           </div>
@@ -144,13 +137,16 @@ class About extends Component {
                 </FormGroup>
                 <FormGroup row>
                   <Col>
-                    <Label htmlFor="message">message</Label>
+                    <Label htmlFor="message">
+                      tell us about the equipment or materials you'd like to
+                      sell
+                    </Label>
                     <Input
                       type="textarea"
-                      id="message"
-                      name="message"
+                      id="sell"
+                      name="sell"
                       rows="12"
-                      value={this.state.message}
+                      value={this.state.sell}
                       onChange={this.handleInputChange}
                     ></Input>
                   </Col>
@@ -171,4 +167,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default Sell;

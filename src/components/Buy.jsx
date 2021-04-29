@@ -1,24 +1,19 @@
 import React, { Component } from "react";
+import Auctions from "./Auctions";
+import ForSale from './ForSale';
 
 class Buy extends Component {
   render() {
-    return (
-      <div>
-        <div className="col-md-6">
-          <img src={auction.image} alt={auction.item} />
-        </div>
-        <div className="col-md-6">
-          <h3>{auction.item}</h3>
-          <p>{auction.description}</p>
-        </div>
-      </div>
-    );
-  }
-}
-
 return (
-  <div className="container">
-    <div className="row">{Buy}</div>
+  <div>
+    <Tabs defaultActiveKey="auctions" id="buyTabs">
+  <Tab eventKey="auctions" title="auctions">
+    <Auctions />
+  </Tab>
+  <Tab eventKey="forSale" title="forSale">
+    <ForSale />
+  </Tab>
+</Tabs>
   </div>
 );
 
