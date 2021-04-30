@@ -120,6 +120,23 @@ p {
   min-height: 200px;
 }
 
+.nav-item.nav-link.active {
+  background-color: #f8913d !important;
+  color: #fff !important;
+}
+
+.nav-tabs .nav-link.active {
+  border-radius: 25px 25px 0 0;
+}
+
+.nav-item.nav-link {
+  background-color: #f8913d;
+}
+
+.nav-tabs .nav-link {
+  border-radius: 25px 25px 0 0 !important;
+}
+
 .site-footer {
   background-color: lightgray;
   padding: 20px 0;
