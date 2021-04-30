@@ -18,10 +18,10 @@ class Auctions extends Component {
     const auctions = this.props.auctions.map((auctions) => {
       return (
         <div className="row justify-content-center">
-          <div key={auctions.id} className="col-md-4 mt-5 mr-5">
+          <div key={auctions.id} className="col-md-5 mt-4 mb-3 mr-4">
             <img src={auctions.image} alt={auctions.name} />
           </div>
-          <div className="col-md-5 mt-5">
+          <div className="col-md-5 mt-4 mb-3">
             <h3>{auctions.name}</h3>
             <p>
               {auctions.date} <br />

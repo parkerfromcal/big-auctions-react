@@ -36,10 +36,10 @@ class ForSale extends Component {
     const forSale = this.props.forsale.map((forSale) => {
       return (
         <div className="row justify-content-center">
-          <div key={forSale.id} className="col-md-4 mb-5 mr-5">
+          <div key={forSale.id} className="col-md-5 mt-4 mb-3 mr-4">
             <img src={forSale.image} alt={forSale.name} />
           </div>
-          <div className="col-md-5 mb-5">
+          <div className="col-md-5 mt-4 mb-3">
             <h3>{forSale.name}</h3>
             <p>
               {forSale.date} <br />
