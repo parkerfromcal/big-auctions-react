@@ -14,14 +14,22 @@ class Header extends Component {
     super(props);
 
     this.toggleNav = this.toggleNav.bind(this);
+    this.showSearch = this.showSearch.bind(this);
     this.state = {
       isNavOpen: false,
+      isShowSearch: false,
     };
   }
 
   toggleNav() {
     this.setState({
       isNavOpen: !this.state.isNavOpen,
+    });
+  }
+
+  showSearch() {
+    this.setState({
+      isShowSearch: !this.state.isShowSearch,
     });
   }
 
@@ -66,12 +74,29 @@ class Header extends Component {
                   </a>
                 </NavItem>
                 <NavItem className="align-self-center">
-                  <a href="/contact">
+                  <a href="/about#getInTouch">
                     <i class="fa fa-envelope fa-2x ml-4 noLink" />
                   </a>
                 </NavItem>
                 <NavItem className="align-self-center">
-                  <i class="fa fa-search fa-2x ml-4" />
+                  <i
+                    onClick={this.state.showSearch}
+                    class="fa fa-search fa-2x ml-4"
+                  />
+
+                  <div class="row">
+                    <form>
+                      <input
+                        type="search"
+                        id="s"
+                        class="form-control"
+                        placeholder="search"
+                      />
+                    </form>
+                    <button type="submit" className="sbtn">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
                 </NavItem>
               </Nav>
             </Collapse>

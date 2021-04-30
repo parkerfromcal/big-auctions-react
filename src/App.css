@@ -206,3 +206,17 @@ a {
     margin: 0 5px;
   }
 }
+
+.sbtn {
+  display: inline;
+  border: none;
+  color: #fff;
+  font-size: 0.6em;
+  cursor: pointer;
+  right: 14px;
+  top: 14px;
+  width: 37px;
+  height: 37px;
+  border-radius: 0 25px 25px 0;
+  background-color: #f8913d;
+}
