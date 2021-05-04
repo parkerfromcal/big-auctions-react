@@ -153,7 +153,7 @@ class Sell extends Component {
                 </FormGroup>
                 <FormGroup row>
                   <Col md={10}>
-                    <Button type="submit" className="btn-blue">
+                    <Button type="submit" className="btn-blue btn-lg">
                       submit
                     </Button>
                   </Col>

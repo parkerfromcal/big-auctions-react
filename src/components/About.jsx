@@ -91,14 +91,14 @@ class About extends Component {
             </div>
             <div className="col-12 col-sm-4 p-1">
               <img
-                src="assets/images/anne-nygard-fWqzoThfnpA-unsplash.jpg"
+                src="/assets/images/anne-nygard-fWqzoThfnpA-unsplash.jpg"
                 className="img-three"
                 alt="conrete form"
               />
             </div>
             <div className="col-12 col-sm-4 p-1">
               <img
-                src="assets/images/ade-adebowale-DKr6BEdI2sE-unsplash.jpg"
+                src="/assets/images/ade-adebowale-DKr6BEdI2sE-unsplash.jpg"
                 className="img-three"
                 alt="two concrete trucks working on new road"
               />
@@ -157,7 +157,7 @@ class About extends Component {
                 </FormGroup>
                 <FormGroup row>
                   <Col md={10}>
-                    <Button type="submit" className="btn-blue">
+                    <Button type="submit" className="btn-blue btn-lg">
                       submit
                     </Button>
                   </Col>
