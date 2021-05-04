@@ -5,8 +5,8 @@ class Home extends Component {
     return (
       <div>
         <div className="container">
-          <div className="row d-flex justify-content-center text-center pt-7 pb-7">
-            <div className="col-12 col-md-6">
+          <div className="row d-flex justify-content-center text-center pt-9 pb-9">
+            <div className="col-12 col-md-7">
               <h1 className="display-4">
                 35 years experience. Specializing in concrete construction
                 equipment.

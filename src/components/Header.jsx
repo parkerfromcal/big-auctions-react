@@ -50,17 +50,17 @@ class Header extends Component {
             <Collapse isOpen={this.state.isNavOpen} navbar>
               <Nav navbar className="ml-auto">
                 <NavItem>
-                  <NavLink className="nav-link nav-link-main mr-3" to="/about">
+                  <NavLink className="nav-link nav-link-main mr-4" to="/about">
                     about
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link nav-link-main mr-3" to="/buy">
+                  <NavLink className="nav-link nav-link-main mr-4" to="/buy">
                     buy
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link nav-link-main mr-3" to="/sell">
+                  <NavLink className="nav-link nav-link-main mr-4" to="/sell">
                     sell
                   </NavLink>
                 </NavItem>
@@ -68,7 +68,7 @@ class Header extends Component {
                   <a
                     type="button"
                     href="/login"
-                    className="btn-blue ml-3 pr-3 pl-3"
+                    className="btn-blue noDec ml-3 mr-3 pr-4 pl-4"
                   >
                     Login
                   </a>
@@ -80,8 +80,8 @@ class Header extends Component {
                 </NavItem>
                 <NavItem className="align-self-center">
                   <i
-                    onClick={this.state.showSearch}
-                    class="fa fa-search fa-2x ml-4"
+                    onClick={this.showSearch}
+                    class="fa fa-search fa-2x ml-5"
                   />
 
                   <div class="row">

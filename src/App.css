@@ -65,6 +65,9 @@ p {
 .App-logo {
   height: 175px;
   width: 175px;
+}
+
+.navbar {
   margin-top: 15px;
 }
 
@@ -74,7 +77,7 @@ p {
 
 .nav-link {
   color: #000 !important;
-  font-weight: 550;
+  font-weight: 500;
   font-size: 20px;
 }
 
@@ -84,6 +87,10 @@ p {
 
 .noLink {
   color: #000;
+}
+
+.noDec {
+  text-decoration: none !important;
 }
 
 .breadcrumb {
