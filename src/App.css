@@ -170,6 +170,7 @@ p {
 .btn-blue {
   background-color: #2769e3 !important;
   color: white;
+  border: none !important;
   border-radius: 25px !important;
   padding: 15px;
 }
@@ -194,6 +195,7 @@ p {
 
 a {
   color: #2769e3;
+  text-decoration: none;
 }
 
 .shadow {
