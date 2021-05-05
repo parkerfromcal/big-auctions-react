@@ -105,24 +105,36 @@ class Header extends Component {
                   </a>
                 </NavItem>
                 <NavItem className="align-self-center">
-                  <i
-                    onClick={this.showSearch}
-                    class="fa fa-search fa-2x ml-5"
-                  />
-
-                  <div class="row">
-                    <form>
-                      <input
-                        type="search"
-                        id="s"
-                        class="form-control"
-                        placeholder="search"
-                      />
-                    </form>
-                    <button type="submit" className="sbtn">
-                      <i class="fa fa-search"></i>
-                    </button>
-                  </div>
+                  {this.state.isShowSearch ? (
+                    ""
+                  ) : (
+                    <i
+                      onClick={this.showSearch}
+                      class="fa fa-search fa-2x ml-5"
+                    />
+                  )}
+                  {this.state.isShowSearch ? (
+                    <div className="row ml-5">
+                      <form>
+                        <input
+                          type="search"
+                          id="s"
+                          class="form-control"
+                          placeholder="search"
+                          onBlur={() =>
+                            this.setState({
+                              isShowSearch: !this.state.isShowSearch,
+                            })
+                          }
+                        />
+                      </form>
+                      <button type="submit" className="sbtn">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                 </NavItem>
               </Nav>
             </Collapse>
