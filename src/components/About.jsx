@@ -10,6 +10,8 @@ import {
   Button,
 } from "reactstrap";
 import { Link } from "react-router-dom";
+import { TESTIMONIES } from "../shared/testimonies";
+import Testimonies from "./Testimonies";
 
 class About extends Component {
   constructor(props) {
@@ -19,6 +21,7 @@ class About extends Component {
       name: "",
       email: "",
       message: "",
+      testimonies: TESTIMONIES,
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -157,12 +160,18 @@ class About extends Component {
                 </FormGroup>
                 <FormGroup row>
                   <Col md={10}>
-                    <Button type="submit" className="btn-blue btn-lg">
+                    <Button type="submit" className="btn-blue btn-lg mb-5">
                       submit
                     </Button>
                   </Col>
                 </FormGroup>
               </Form>
+            </div>
+          </div>
+          <hr />
+          <div className="row">
+            <div className="col-12">
+              <Testimonies testimonies={this.state.testimonies} />
             </div>
           </div>
         </div>
