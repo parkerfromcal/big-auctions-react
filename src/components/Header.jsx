@@ -22,7 +22,6 @@ class Header extends Component {
     super(props);
 
     this.toggleNav = this.toggleNav.bind(this);
-    this.showSearch = this.showSearch.bind(this);
     this.state = {
       isNavOpen: false,
       isShowSearch: false,
