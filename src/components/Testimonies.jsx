@@ -11,14 +11,6 @@ import {
 } from "reactstrap";
 
 class Testimonies extends Component {
-  state = {
-    isModalOpen: false,
-  };
-  toggleModal = () => {
-    this.setState({
-      isModalOpen: !this.state.isModalOpen,
-    });
-  };
   render() {
     const testimonies = this.props.testimonies.map((testimonies) => {
       return (
@@ -43,19 +35,43 @@ class Testimonies extends Component {
     return (
       <div>
         <div>{testimonies}</div>
-        <div className="d-flex justify-content-center mt-5">
-          <Button onClick={this.toggleModal} className="btn-blue btn-lg">
-            tell us about your experience
-          </Button>
+        <div className="d-flex flex justify-content-center mt-5">
+          <AddTestimony />
         </div>
+      </div>
+    );
+  }
+}
+
+class AddTestimony extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isModalOpen: false,
+    };
+    this.toggleModal = this.toggleModal.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  toggleModal() {
+    this.setState({
+      isModalOpen: !this.state.isModalOpen,
+    });
+  }
+  handleSubmit(values) {
+    console.log("Thank you for your testimonial: " + JSON.stingify(values));
+    alert("Thank you for your testimonial: " + JSON.stingify(values));
+  }
+  render() {
+    return (
+      <React.Fragment>
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-          <ModalHeader toggle={this.toggleModal} closeButton>
-            tell us about your experience with BIC
+          <ModalHeader toggle={this.toggleModal}>
+            Tell us about your experience with BIC
           </ModalHeader>
           <ModalBody>
             <Form onSubmit={(values) => this.handleSubmit(values)}>
               <FormGroup>
-                <Label htmlFor="name">name</Label>
+                <Label htmlFor="name">Name</Label>
                 <Input
                   type="text"
                   id="name"
@@ -64,7 +80,7 @@ class Testimonies extends Component {
                 />
               </FormGroup>
               <FormGroup>
-                <Label htmlFor="testimonial">testimonial</Label>
+                <Label htmlFor="testimonial">Testimonial</Label>
                 <Input
                   type="textarea"
                   id="testimonial"
@@ -73,13 +89,17 @@ class Testimonies extends Component {
                 />
               </FormGroup>
               <Button type="submit" className="btn-blue">
-                submit
+                Submit
               </Button>
             </Form>
           </ModalBody>
         </Modal>
-      </div>
+        <Button onClick={this.toggleModal} className="btn-blue btn-lg">
+          tell us about your experience
+        </Button>
+      </React.Fragment>
     );
   }
 }
+
 export default Testimonies;
