@@ -1,16 +1,21 @@
 import React, { Component } from "react";
-import {
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  Label,
-  Input,
-  Form,
-  FormGroup,
-} from "reactstrap";
+import { Button } from "reactstrap";
+import ReusableModal from "./ReusableModal";
+import TestimoniesForm from "./TestimoniesForm";
 
 class Testimonies extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isModalOpen: false,
+    };
+    this.toggleModal = this.toggleModal.bind(this);
+  }
+  toggleModal() {
+    this.setState({
+      isModalOpen: !this.state.isModalOpen,
+    });
+  }
   render() {
     const testimonies = this.props.testimonies.map((testimonies) => {
       return (
@@ -36,68 +41,14 @@ class Testimonies extends Component {
       <div>
         <div>{testimonies}</div>
         <div className="d-flex flex justify-content-center mt-5">
-          <AddTestimony />
+          <Button onClick={this.toggleModal} className="btn-blue btn-lg">
+            tell us about your experience
+          </Button>
+          <ReusableModal header="Tell us about your BIC experience">
+            <TestimoniesForm />
+          </ReusableModal>
         </div>
       </div>
-    );
-  }
-}
-
-class AddTestimony extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isModalOpen: false,
-    };
-    this.toggleModal = this.toggleModal.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-  toggleModal() {
-    this.setState({
-      isModalOpen: !this.state.isModalOpen,
-    });
-  }
-  handleSubmit(values) {
-    console.log("Thank you for your testimonial: " + JSON.stingify(values));
-    alert("Thank you for your testimonial: " + JSON.stingify(values));
-  }
-  render() {
-    return (
-      <React.Fragment>
-        <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-          <ModalHeader toggle={this.toggleModal}>
-            Tell us about your experience with BIC
-          </ModalHeader>
-          <ModalBody>
-            <Form onSubmit={(values) => this.handleSubmit(values)}>
-              <FormGroup>
-                <Label htmlFor="name">Name</Label>
-                <Input
-                  type="text"
-                  id="name"
-                  name="name"
-                  innerRef={(input) => (this.name = input)}
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label htmlFor="testimonial">Testimonial</Label>
-                <Input
-                  type="textarea"
-                  id="testimonial"
-                  name="testimonial"
-                  innerRef={(input) => (this.testimonial = input)}
-                />
-              </FormGroup>
-              <Button type="submit" className="btn-blue">
-                Submit
-              </Button>
-            </Form>
-          </ModalBody>
-        </Modal>
-        <Button onClick={this.toggleModal} className="btn-blue btn-lg">
-          tell us about your experience
-        </Button>
-      </React.Fragment>
     );
   }
 }
