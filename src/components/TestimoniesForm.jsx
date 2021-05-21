@@ -4,19 +4,15 @@ import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 const TestimoniesForm = () => {
   const [name, setName] = useState("");
   const [testimonial, setTestimonial] = useState("");
+  const [modal, setModal] = useState(true);
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Thank you for your testimonial: " + name + testimonial);
-    alert("Thank you for your testimonial: " + name + testimonial);
+    console.log(`Thank you ${name} for your testimonial: ${testimonial}`);
+    alert(`Thank you ${name} for your testimonial: ${testimonial}`);
   };
 
-  // const handleChange = () => {
-  //   setName("");
-  // };
   return (
     <div>
-      {/* <Button onClick={handleChange}>change name</Button>
-      <div>{name}</div> */}
       <Form onSubmit={(event) => handleSubmit(event)}>
         <FormGroup>
           <Label htmlFor="name">Name</Label>
@@ -34,6 +30,11 @@ const TestimoniesForm = () => {
             id="testimonial"
             name="testimonial"
             onChange={(event) => setTestimonial(event.target.value)}
+            onBlur={() =>
+              setModal({
+                modal: false,
+              })
+            }
           />
         </FormGroup>
         <Button type="submit" className="btn-blue">
