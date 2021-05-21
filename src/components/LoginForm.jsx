@@ -2,15 +2,30 @@ import React, { useState } from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 
 const LoginForm = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [remember, setRemember] = useState(false);
+  const [modal, setModal] = useState(true);
+  const handleLogin = (event) => {
+    event.preventDefault();
+    console.log(
+      `Username: ${username} Password: ${password}` +
+        " " +
+        remember +
+        " " +
+        modal
+    );
+    alert(`Username: ${username}`);
+  };
   return (
-    <Form onSubmit={this.handleLogin}>
+    <Form onSubmit={(event) => handleLogin(event)}>
       <FormGroup>
         <Label htmlFor="username">username</Label>
         <Input
           type="text"
           id="username"
           name="username"
-          innerRef={(input) => (this.username = input)}
+          onChange={(event) => setUsername(event.target.value)}
         />
       </FormGroup>
       <FormGroup>
@@ -19,7 +34,12 @@ const LoginForm = () => {
           type="password"
           id="password"
           name="password"
-          innerRef={(input) => (this.password = input)}
+          onChange={(event) => setPassword(event.target.value)}
+          onBlur={() =>
+            setModal({
+              modal: false,
+            })
+          }
         />
       </FormGroup>
       <FormGroup check>
@@ -27,7 +47,7 @@ const LoginForm = () => {
           <Input
             type="checkbox"
             name="remember"
-            innerRef={(input) => (this.remember = input)}
+            onChange={(event) => setRemember(event.target.value)}
           />
           remember me
         </Label>

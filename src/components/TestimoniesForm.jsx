@@ -7,7 +7,9 @@ const TestimoniesForm = () => {
   const [modal, setModal] = useState(true);
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(`Thank you ${name} for your testimonial: ${testimonial}`);
+    console.log(
+      `Thank you ${name} for your testimonial: ${testimonial}` + modal
+    );
     alert(`Thank you ${name} for your testimonial: ${testimonial}`);
   };
 
