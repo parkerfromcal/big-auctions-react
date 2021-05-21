@@ -1,14 +1,12 @@
 import React from "react";
 import { Modal, ModalHeader, ModalBody } from "reactstrap";
-import props from "prop-types";
 
-const ReusableModal = () => {
+const ReusableModal = (props) => {
+  const { isModalOpen, toggleModal, children, header } = props;
   return (
-    <Modal>
-      <ModalHeader isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-        {props.header}
-      </ModalHeader>
-      <ModalBody toggle={this.toggleModal}>{props.children}</ModalBody>
+    <Modal isOpen={isModalOpen} toggle={toggleModal}>
+      <ModalHeader toggle={toggleModal}>{header}</ModalHeader>
+      <ModalBody>{children}</ModalBody>
     </Modal>
   );
 };

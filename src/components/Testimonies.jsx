@@ -44,7 +44,11 @@ class Testimonies extends Component {
           <Button onClick={this.toggleModal} className="btn-blue btn-lg">
             tell us about your experience
           </Button>
-          <ReusableModal header="Tell us about your BIC experience">
+          <ReusableModal
+            header="Tell us about your BIC experience"
+            isModalOpen={this.state.isModalOpen}
+            toggleModal={this.toggleModal}
+          >
             <TestimoniesForm />
           </ReusableModal>
         </div>
