@@ -23,7 +23,6 @@ class Header extends Component {
       isModalOpen: false,
     };
     this.toggleModal = this.toggleModal.bind(this);
-    this.handleLogin = this.handleLogin.bind(this);
     this.showSearch = this.showSearch.bind(this);
   }
 
@@ -37,14 +36,6 @@ class Header extends Component {
     this.setState({
       isModalOpen: !this.state.isModalOpen,
     });
-  }
-
-  handleLogin(event) {
-    alert(
-      `Username: ${this.username.value} Password: ${this.password.value} Remember: ${this.remember.check}`
-    );
-    this.toggleModal();
-    event.preventDefault();
   }
 
   showSearch() {

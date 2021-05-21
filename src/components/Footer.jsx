@@ -1,14 +1,7 @@
 import React, { Component } from "react";
-import {
-  Modal,
-  ModalHeader,
-  ModalBody,
-  Form,
-  FormGroup,
-  Input,
-  Label,
-  Button,
-} from "reactstrap";
+import { Button } from "reactstrap";
+import ReusableModal from "./ReusableModal";
+import NewsletterForm from "./NewsletterForm";
 
 class Footer extends Component {
   constructor(props) {
@@ -18,21 +11,12 @@ class Footer extends Component {
       isModalOpen: false,
     };
     this.toggleModal = this.toggleModal.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   toggleModal() {
     this.setState({
       isModalOpen: !this.state.isModalOpen,
     });
-  }
-
-  handleSubmit(event) {
-    alert(
-      `Thank you for signing up. We'll send our monthly newsletter to: ${this.newsEmail.value}`
-    );
-    this.toggleModal();
-    event.preventDefault();
   }
 
   render() {
@@ -80,30 +64,13 @@ class Footer extends Component {
             </div>
           </div>
         </footer>
-
-        <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-          <ModalHeader toggle={this.toggleModal}>
-            sign up for big auctions newsletter
-          </ModalHeader>
-          <ModalBody>
-            <Form onSubmit={this.handleSubmit}>
-              <FormGroup>
-                <Label htmlFor="email">email</Label>
-                <Input
-                  type="text"
-                  id="newsEmail"
-                  name="newsEmail"
-                  innerRef={(input) => (this.newsEmail = input)}
-                />
-              </FormGroup>
-              <FormGroup>
-                <Button type="submit" value="submit" className="btn-blue">
-                  submit
-                </Button>
-              </FormGroup>
-            </Form>
-          </ModalBody>
-        </Modal>
+        <ReusableModal
+          header="Login"
+          isModalOpen={this.state.isModalOpen}
+          toggleModal={this.toggleModal}
+        >
+          <NewsletterForm />
+        </ReusableModal>
       </div>
     );
   }
