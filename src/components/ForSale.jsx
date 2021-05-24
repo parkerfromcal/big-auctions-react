@@ -18,7 +18,7 @@ class ForSale extends Component {
   renderForSale(forSale) {
     if (forSale) {
       return (
-        <Card>
+        <Card className="col-md-5">
           <Link to={`/buy/${forSale.name}`}>
             <CardImg width="100%" src={forSale.image} />
           </Link>
