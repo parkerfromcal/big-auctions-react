@@ -11,7 +11,7 @@ class ForSale extends Component {
     };
   }
 
-  onSelectedForSale(forSale) {
+  onForSaleSelect(forSale) {
     this.setState({ selectedForSale: forSale });
   }
 
@@ -45,7 +45,7 @@ class ForSale extends Component {
               {forSale.date} <br />
               {forSale.description}
             </p>
-            <Button onClick={() => this.onSelectedForSale(forSale)}>
+            <Button onClick={() => this.onForSaleSelect(forSale)}>
               Bid now
             </Button>
           </div>
