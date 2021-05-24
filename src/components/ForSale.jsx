@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Card, CardImg, CardBody, CardTitle, Button } from "reactstrap";
+import { Button } from "reactstrap";
+import ForSaleInfo from "./ForSaleInfo";
 
 class ForSale extends Component {
   constructor(props) {
@@ -11,26 +11,26 @@ class ForSale extends Component {
     };
   }
 
-  onForSaleSelect(forSale) {
-    this.setState({ selectedForSale: forSale });
+  onForSaleSelect(forSaleId) {
+    this.setState({ selectedForSale: forSaleId });
   }
 
-  renderForSale(forSale) {
-    if (forSale) {
-      return (
-        <Card className="col-md-5">
-          <Link to={`/buy/${forSale.name}`}>
-            <CardImg width="100%" src={forSale.image} />
-          </Link>
-          <CardBody>
-            <CardTitle>{forSale.name}</CardTitle>
-            <CardBody>{forSale.description}</CardBody>
-          </CardBody>
-        </Card>
-      );
-    }
-    return <div />;
-  }
+  // renderForSale(forSale) {
+  //   if (forSale) {
+  //     return (
+  //       <Card className="col-md-5">
+  //         <Link to={`/buy/${forSale.name}`}>
+  //           <CardImg width="100%" src={forSale.image} />
+  //         </Link>
+  //         <CardBody>
+  //           <CardTitle>{forSale.name}</CardTitle>
+  //           <CardBody>{forSale.description}</CardBody>
+  //         </CardBody>
+  //       </Card>
+  //     );
+  //   }
+  //   return <div />;
+  // }
 
   render() {
     const forSale = this.props.forsale.map((forSale) => {
@@ -55,8 +55,8 @@ class ForSale extends Component {
     return (
       <div>
         <div className="row">{forSale}</div>
-        <div className="row">
-          {this.renderForSale(this.state.selectedForSale)}
+        <div>
+          <ForSaleInfo forSale={this.state.selectedForSale} />
         </div>
       </div>
     );

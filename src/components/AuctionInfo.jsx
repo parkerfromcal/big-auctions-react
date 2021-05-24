@@ -17,7 +17,8 @@ class AuctionInfo extends Component {
           <CardImg top src={auction.image} alt={auction.name} />
           <CardBody>
             <CardTitle>{auction.name}</CardTitle>
-            <CardText>{auction.description}</CardText>
+            <CardText className="pb-5">{auction.description}</CardText>
+            <CardTitle>Enter Info to Register</CardTitle>
             <Label className="pl-2">Name</Label>
             <Input type="text" id="registerName"></Input>
             <Label className="pl-2">Email</Label>

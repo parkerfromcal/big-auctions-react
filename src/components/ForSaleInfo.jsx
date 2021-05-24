@@ -17,7 +17,8 @@ class ForSaleInfo extends Component {
           <CardImg top src={forsale.image} alt={forsale.name} />
           <CardBody>
             <CardTitle>{forsale.name}</CardTitle>
-            <CardText>{forsale.description}</CardText>
+            <CardText className="pb-5">{forsale.description}</CardText>
+            <CardTitle>Enter Info to Bid</CardTitle>
             <Label className="pl-2">Name</Label>
             <Input type="text" id="bidName"></Input>
             <Label className="pl-2">Bid Amount</Label>
