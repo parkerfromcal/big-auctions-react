@@ -45,6 +45,10 @@ class About extends Component {
     event.preventDefault();
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div>

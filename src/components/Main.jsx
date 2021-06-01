@@ -5,7 +5,7 @@ import Home from "./Home";
 import About from "./About";
 import Buy from "./Buy";
 import Sell from "./Sell";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 class Main extends Component {
   constructor(props) {
@@ -25,6 +25,7 @@ class Main extends Component {
           <Route exact path="/about" component={About} />
           <Route exact path="/buy" component={Buy} />
           <Route exact path="/sell" component={Sell} />
+          <Redirect to="/" />
         </Switch>
         <Footer />
       </div>

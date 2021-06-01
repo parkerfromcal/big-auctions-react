@@ -196,6 +196,15 @@ p {
   border-radius: 25px 25px 0 0 !important;
 }
 
+@media (max-width: 786px) {
+  .navbar-nav {
+    width: 50%;
+  }
+  .nav-item {
+    margin: 5px 0 0 0;
+  }
+}
+
 .site-footer {
   background-color: lightgray;
   padding: 20px 0;

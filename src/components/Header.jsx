@@ -16,12 +16,12 @@ class Header extends Component {
   constructor(props) {
     super(props);
 
-    this.toggleNav = this.toggleNav.bind(this);
     this.state = {
       isNavOpen: false,
       isShowSearch: false,
       isModalOpen: false,
     };
+    this.toggleNav = this.toggleNav.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
     this.showSearch = this.showSearch.bind(this);
   }
@@ -47,7 +47,7 @@ class Header extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar dark expand="md">
+        <Navbar light expand="md">
           <div className="container">
             <NavbarBrand className="mr-auto" href="/">
               <img
@@ -61,17 +61,26 @@ class Header extends Component {
             <Collapse isOpen={this.state.isNavOpen} navbar>
               <Nav navbar className="ml-auto">
                 <NavItem>
-                  <NavLink className="nav-link nav-link-main mr-4" to="/about">
+                  <NavLink
+                    className="nav-link nav-link-main mr-4 mt-2"
+                    to="/about"
+                  >
                     about
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link nav-link-main mr-4" to="/buy">
+                  <NavLink
+                    className="nav-link nav-link-main mr-4 mt-2"
+                    to="/buy"
+                  >
                     buy
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link nav-link-main mr-4" to="/sell">
+                  <NavLink
+                    className="nav-link nav-link-main mr-4 mt-2"
+                    to="/sell"
+                  >
                     sell
                   </NavLink>
                 </NavItem>
@@ -79,14 +88,14 @@ class Header extends Component {
                   <Button
                     type="button"
                     onClick={this.toggleModal}
-                    className="btn-blue noDec ml-3 mr-3 pr-4 pl-4"
+                    className="btn-blue noDec ml-3 mr-3 mt-2 pr-4 pl-4"
                   >
                     Login
                   </Button>
                 </NavItem>
                 <NavItem className="align-self-center">
                   <a href="/about#getInTouch">
-                    <i class="fa fa-envelope fa-2x ml-4 noLink" />
+                    <i class="fa fa-envelope fa-2x ml-4 mt-2 noLink" />
                   </a>
                 </NavItem>
                 <NavItem className="align-self-center">
@@ -95,7 +104,7 @@ class Header extends Component {
                   ) : (
                     <i
                       onClick={this.showSearch}
-                      class="fa fa-search fa-2x ml-5"
+                      class="fa fa-search fa-2x ml-5 mt-2"
                     />
                   )}
                   {this.state.isShowSearch ? (

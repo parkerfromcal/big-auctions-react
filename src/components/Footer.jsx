@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "reactstrap";
+import { Link } from "react-router-dom";
 import ReusableModal from "./ReusableModal";
 import NewsletterForm from "./NewsletterForm";
 
@@ -27,18 +28,15 @@ class Footer extends Component {
             <div className="row">
               <div className="col-12 mr-5 mb-5 mt-2">
                 <div className="d-flex">
-                  <a href="/about" className="mr-5">
+                  <Link to="/about" className="mr-5">
                     about
-                  </a>
-                  <a href="/buy" className="mr-5">
+                  </Link>
+                  <Link to="/buy" className="mr-5">
                     buy
-                  </a>
-                  <a href="/sell" className="mr-5">
+                  </Link>
+                  <Link to="/sell" className="mr-5">
                     sell
-                  </a>
-                  <a href="/login" className="mr-5">
-                    login
-                  </a>
+                  </Link>
                   <Button
                     type="button"
                     onClick={this.toggleModal}
