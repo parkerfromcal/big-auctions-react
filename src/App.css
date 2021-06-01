@@ -189,6 +189,7 @@ p {
 
 .nav-item.nav-link {
   background-color: #f8913d;
+  color: #6d6e72 !important;
 }
 
 .nav-tabs .nav-link {

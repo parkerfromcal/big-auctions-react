@@ -10,14 +10,14 @@ import {
 } from "reactstrap";
 
 class AuctionInfo extends Component {
-  renderAuction(auction) {
+  renderAuction(auctions) {
     return (
       <div className="col-md-5 and m-1">
         <Card>
-          <CardImg top src={auction.image} alt={auction.name} />
+          <CardImg top src={auctions.image} alt={auctions.name} />
           <CardBody>
-            <CardTitle>{auction.name}</CardTitle>
-            <CardText className="pb-5">{auction.description}</CardText>
+            <CardTitle>{auctions.name}</CardTitle>
+            <CardText className="pb-5">{auctions.description}</CardText>
             <CardTitle>Enter Info to Register</CardTitle>
             <Label className="pl-2">Name</Label>
             <Input type="text" id="registerName"></Input>

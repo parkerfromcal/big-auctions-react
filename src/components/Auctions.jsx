@@ -16,19 +16,19 @@ class Auctions extends Component {
   }
 
   render() {
-    const auctions = this.props.auctions.map((auctions) => {
+    const auction = this.props.auctions.map((auction) => {
       return (
         <div className="row justify-content-center">
-          <div key={auctions.id} className="col-md-5 mt-4 mb-3 mr-4">
-            <img src={auctions.image} alt={auctions.name} />
+          <div key={auction.id} className="col-md-5 mt-4 mb-3 mr-4">
+            <img src={auction.image} alt={auction.name} />
           </div>
           <div className="col-md-5 mt-4 mb-3">
-            <h3>{auctions.name}</h3>
+            <h3>{auction.name}</h3>
             <p>
-              {auctions.date} <br />
-              {auctions.description}
+              {auction.date} <br />
+              {auction.description}
             </p>
-            <Button onClick={(auctions) => this.onAuctionSelect(auctions)}>
+            <Button onClick={() => this.onAuctionSelect(auction)}>
               Register now
             </Button>
           </div>
@@ -37,7 +37,7 @@ class Auctions extends Component {
     });
     return (
       <div>
-        <div className="row">{auctions}</div>
+        <div className="row">{auction}</div>
         <div>
           <AuctionInfo auctions={this.state.selectedAuction} />
         </div>
