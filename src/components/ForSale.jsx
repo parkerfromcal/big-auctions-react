@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button } from "reactstrap";
 import ForSaleInfo from "./ForSaleInfo";
+import { Link } from "react-router-dom";
 
 class ForSale extends Component {
   constructor(props) {
@@ -15,23 +16,6 @@ class ForSale extends Component {
     this.setState({ selectedForSale: forSaleId });
   }
 
-  // renderForSale(forSale) {
-  //   if (forSale) {
-  //     return (
-  //       <Card className="col-md-5">
-  //         <Link to={`/buy/${forSale.name}`}>
-  //           <CardImg width="100%" src={forSale.image} />
-  //         </Link>
-  //         <CardBody>
-  //           <CardTitle>{forSale.name}</CardTitle>
-  //           <CardBody>{forSale.description}</CardBody>
-  //         </CardBody>
-  //       </Card>
-  //     );
-  //   }
-  //   return <div />;
-  // }
-
   render() {
     const forSale = this.props.forsale.map((forSale) => {
       return (
@@ -45,9 +29,11 @@ class ForSale extends Component {
               {forSale.date} <br />
               {forSale.description}
             </p>
-            <Button onClick={() => this.onForSaleSelect(forSale)}>
-              Bid now
-            </Button>
+            <Link to={`/buy/${forSale.name}`}>
+              <Button onClick={() => this.onForSaleSelect(forSale)}>
+                Bid now
+              </Button>
+            </Link>
           </div>
         </div>
       );

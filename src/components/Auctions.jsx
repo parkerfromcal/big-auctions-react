@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button } from "reactstrap";
 import AuctionInfo from "./AuctionInfo";
+import { Link } from "react-router-dom";
 
 class Auctions extends Component {
   constructor(props) {
@@ -28,9 +29,11 @@ class Auctions extends Component {
               {auction.date} <br />
               {auction.description}
             </p>
-            <Button onClick={() => this.onAuctionSelect(auction)}>
-              Register now
-            </Button>
+            <Link to={`/buy/${auction.name}`}>
+              <Button onClick={() => this.onAuctionSelect(auction)}>
+                Register now
+              </Button>
+            </Link>
           </div>
         </div>
       );
