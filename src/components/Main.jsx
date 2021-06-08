@@ -40,7 +40,7 @@ class Main extends Component {
     const ForSaleWithName = ({ match }) => {
       return (
         <ForSaleInfo
-          forsale={
+          forSale={
             this.state.forsale.filter(
               (forsale) => forsale.name === match.params.forsaleName
             )[0]

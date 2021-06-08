@@ -42,7 +42,7 @@ class ForSale extends Component {
       <div>
         <div className="row">{forSale}</div>
         <div>
-          <ForSaleInfo forSale={this.state.selectedForSale} />
+          <ForSaleInfo forsale={this.state.selectedForSale} />
         </div>
       </div>
     );
