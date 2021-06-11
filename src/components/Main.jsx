@@ -56,8 +56,16 @@ class Main extends Component {
           <Route exact path="/" component={Homepage} />
           <Route exact path="/about" component={About} />
           <Route exact path="/buy" component={Buy} />
-          <Route path="/buy/:auctionName" component={AuctionWithName} />
-          <Route path="/buy/:forsaleName" component={ForSaleWithName} />
+          <Route
+            exact
+            path="/buy/auctions/:auctionName"
+            component={AuctionWithName}
+          />
+          <Route
+            exact
+            path="/buy/for-sale/:forsaleName"
+            component={ForSaleWithName}
+          />
           <Route exact path="/sell" component={Sell} />
           <Redirect to="/" />
         </Switch>

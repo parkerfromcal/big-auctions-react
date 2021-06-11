@@ -9,19 +9,19 @@ import {
   Input,
 } from "reactstrap";
 
-const RenderForSale = ({ forsale }) => {
+const RenderForSale = ({ forSale }) => {
   return (
     <div className="row">
       <div className="col-md-5 ml-5 mb-5 mt-5">
         <Card>
-          <CardImg top src={forsale.image} alt={forsale.name} />
+          <CardImg top src={forSale.image} alt={forSale.name} />
         </Card>
       </div>
       <div className="col-md-5 ml-5 mb-5 mt-5">
         <Card>
           <CardBody>
-            <CardTitle>{forsale.name}</CardTitle>
-            <CardText className="pb-5">{forsale.description}</CardText>
+            <CardTitle>{forSale.name}</CardTitle>
+            <CardText className="pb-5">{forSale.description}</CardText>
             <CardTitle>Enter Info to Bid</CardTitle>
             <Label className="pl-2">Name</Label>
             <Input type="text" id="bidName"></Input>
@@ -34,16 +34,10 @@ const RenderForSale = ({ forsale }) => {
   );
 };
 
-const ForSaleInfo = (props) => {
-  if (props.forsale) {
-    return (
-      <div className="row">
-        <RenderForSale forSale={props.forsale} />
-      </div>
-    );
-  } else {
-    return <div></div>;
-  }
+const ForSaleInfo = ({ forSale }) => {
+  return (
+    <div className="row">{forSale && <RenderForSale forSale={forSale} />}</div>
+  );
 };
 
 export default ForSaleInfo;

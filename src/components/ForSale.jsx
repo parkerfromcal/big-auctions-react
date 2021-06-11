@@ -29,7 +29,7 @@ class ForSale extends Component {
               {forSale.date} <br />
               {forSale.description}
             </p>
-            <Link to={`/buy/${forSale.name}`}>
+            <Link to={`/buy/for-sale/${forSale.name}`}>
               <Button onClick={() => this.onForSaleSelect(forSale)}>
                 Bid now
               </Button>

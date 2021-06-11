@@ -29,7 +29,7 @@ class Auctions extends Component {
               {auction.date} <br />
               {auction.description}
             </p>
-            <Link to={`/buy/${auction.name}`}>
+            <Link to={`/buy/auctions/${auction.name}`}>
               <Button onClick={() => this.onAuctionSelect(auction)}>
                 Register now
               </Button>
