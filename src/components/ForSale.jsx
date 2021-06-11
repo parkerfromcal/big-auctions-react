@@ -21,7 +21,7 @@ class ForSale extends Component {
       return (
         <div className="row justify-content-center">
           <div key={forSale.id} className="col-md-5 mt-4 mb-3 mr-4">
-            <img src={forSale.image} alt={forSale.name} />
+            <img className="img-fluid" src={forSale.image} alt={forSale.name} />
           </div>
           <div className="col-md-5 mt-4 mb-3">
             <h3>{forSale.name}</h3>
