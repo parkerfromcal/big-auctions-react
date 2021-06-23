@@ -196,7 +196,7 @@ p {
   border-radius: 25px 25px 0 0 !important;
 }
 
-@media (max-width: 786px) {
+@media (max-width: 768px) {
   .navbar-nav {
     width: 50%;
     align-items: right;
@@ -219,6 +219,15 @@ p {
 
 .site-footer a:hover {
   color: white;
+}
+
+@media (max-width: 768px) {
+  .mobileFooter {
+    text-align: center;
+  }
+  .mobileFooter a {
+    padding-bottom: 10px !important;
+  }
 }
 
 .bg-gray {

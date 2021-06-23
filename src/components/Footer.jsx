@@ -27,7 +27,7 @@ class Footer extends Component {
           <div className="container">
             <div className="row">
               <div className="col-12 mr-5 mb-5 mt-2">
-                <div className="d-flex">
+                <div className="d-flex flex-wrap mobileFooter">
                   <Link to="/about" className="mr-5">
                     about
                   </Link>
