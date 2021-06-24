@@ -222,12 +222,16 @@ p {
 }
 
 @media (max-width: 768px) {
-  .mobileFooter {
+  .col-md-4 {
     text-align: center;
   }
-  .mobileFooter a {
-    padding-bottom: 10px !important;
+  .mobileFooter {
+    text-align: center !important;
   }
+}
+
+.mobileFooter {
+  text-align: right;
 }
 
 .bg-gray {
